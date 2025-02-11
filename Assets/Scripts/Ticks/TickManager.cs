@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TickManager
 {
+    public event System.Action OnTick;
     private int m_TickCount;
 
     public TickManager()
@@ -11,6 +12,7 @@ public class TickManager
 
     public void Tick()
     {
+        OnTick?.Invoke();
         m_TickCount += 1;
         Debug.Log("Current tick count : " + m_TickCount);
     }
