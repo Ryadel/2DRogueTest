@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private Vector2Int m_CellPosition;
 
     public InputAction MoveAction;
+    public InputAction StartNewGameAction;
 
     /// <summary>
     /// Puts the character on the board at the given position.
@@ -26,12 +27,20 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        MoveAction.Enable();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.IsGameOver)
+        {
+            if (StartNewGameAction.triggered)
+            {
+                GameManager.Instance.StartNewGame();
+            }
+            return;
+        }
+
         var newCellTarget = m_CellPosition;
         if (MoveAction.triggered)
         {
@@ -47,9 +56,16 @@ public class PlayerController : MonoBehaviour
             if (cellData != null && cellData.Passable)
             {
                 GameManager.Instance.TickManager.Tick();
-                MoveTo(newCellTarget);
-                if (cellData.ContainedObject != null)
+                if (cellData.ContainedObject == null)
+                {
+                    MoveTo(newCellTarget);
+                }
+                else if (cellData.ContainedObject.PlayerWantsToEnter())
+                {
+                    MoveTo(newCellTarget);
+                    //Call PlayerEntered AFTER moving the player! Otherwise not in cell yet
                     cellData.ContainedObject.PlayerEntered();
+                }
             }
         }
     }

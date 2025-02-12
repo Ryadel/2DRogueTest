@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6732553415816854696}
   - component: {fileID: 6246159925163803854}
   m_Layer: 0
-  m_Name: SmallFood
+  m_Name: FoodCell_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,3 +100,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e3f057645d3a44d9b5454af8209dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AmountGranted: 5

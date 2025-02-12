@@ -16,7 +16,12 @@ public class BoardManager : MonoBehaviour
     public Tile[] WallTiles;
     public PlayerController Player;
 
-    public BaseObject FoodPrefab;
+    public FoodCellObject[] FoodPrefabs;
+    public WallCellObject[] WallPrefabs;
+    public ExitCellObject ExitCellPrefab;
+
+    public int MinFoodCount = 3;
+    public int MaxFoodCount = 7;
 
     public void Init()
     {
@@ -51,8 +56,37 @@ public class BoardManager : MonoBehaviour
 
         var playerStartingPosition = new Vector2Int(1, 1);
         m_EmptyCellsList.Remove(playerStartingPosition);
+
+        Vector2Int endCoord = new Vector2Int(Width - 2, Height - 2);
+        AddObject(Instantiate(ExitCellPrefab), endCoord);
+        m_EmptyCellsList.Remove(endCoord);
+
+        GenerateWall();
         GenerateFood();
-        Player.Spawn(this, playerStartingPosition);
+    }
+
+    public void Clean()
+    {
+        //no board data, so exit early, nothing to clean
+        if (m_BoardData == null)
+            return;
+
+        for (int y = 0; y < Height; ++y)
+        {
+            for (int x = 0; x < Width; ++x)
+            {
+                var cellData = m_BoardData[x, y];
+                if (cellData.ContainedObject != null)
+                {
+                    //CAREFUL! Destroy the GameObject NOT just cellData.ContainedObject
+                    //Otherwise what you are destroying is the JUST CellObject COMPONENT
+                    //and not the whole gameobject with sprite
+                    Destroy(cellData.ContainedObject.gameObject);
+                }
+
+                m_Tilemap.SetTile(new Vector3Int(x, y, 0), null);
+            }
+        }
     }
 
     public Vector3 CellToWorld(Vector2Int cellIndex) => m_Grid.GetCellCenterWorld((Vector3Int)cellIndex);
@@ -67,17 +101,48 @@ public class BoardManager : MonoBehaviour
 
     void GenerateFood()
     {
-        int foodCount = 5;
+        int foodCount = Random.Range(MinFoodCount, MaxFoodCount +1);
         for (int i = 0; i < foodCount; ++i)
+        {
+            int randomIndex = Random.Range(0, m_EmptyCellsList.Count);
+            Vector2Int coord = m_EmptyCellsList[randomIndex];
+            m_EmptyCellsList.RemoveAt(randomIndex);
+            CellData data = m_BoardData[coord.x, coord.y];
+            var newFood = Instantiate(FoodPrefabs[Random.Range(0, FoodPrefabs.Length)]);
+            AddObject(newFood, coord);
+        }
+    }
+
+    void GenerateWall()
+    {
+        int wallCount = Random.Range(6, 10);
+        for (int i = 0; i < wallCount; ++i)
         {
             int randomIndex = Random.Range(0, m_EmptyCellsList.Count);
             Vector2Int coord = m_EmptyCellsList[randomIndex];
 
             m_EmptyCellsList.RemoveAt(randomIndex);
             CellData data = m_BoardData[coord.x, coord.y];
-            var newFood = Instantiate(FoodPrefab);
-            newFood.transform.position = CellToWorld(coord);
-            data.ContainedObject = newFood;
+            WallCellObject newWall = Instantiate(WallPrefabs[Random.Range(0, WallPrefabs.Length)]);
+            AddObject(newWall, coord);
         }
+    }
+
+    void AddObject(CellObject obj, Vector2Int coord)
+    {
+        CellData data = m_BoardData[coord.x, coord.y];
+        obj.transform.position = CellToWorld(coord);
+        data.ContainedObject = obj;
+        obj.Init(coord);
+    }
+
+    public Tile GetCellTile(Vector2Int cellIndex)
+    {
+        return m_Tilemap.GetTile<Tile>(new Vector3Int(cellIndex.x, cellIndex.y, 0));
+    }
+
+    public void SetCellTile(Vector2Int cellIndex, Tile tile)
+    {
+        m_Tilemap.SetTile(new Vector3Int(cellIndex.x, cellIndex.y, 0), tile);
     }
 }

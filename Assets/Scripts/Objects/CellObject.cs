@@ -1,19 +1,24 @@
 using UnityEngine;
 
-public class FoodObject : BaseObject
+public class CellObject : MonoBehaviour
 {
-    public int AmountGranted = 10;
+    protected Vector2Int m_Cell;
+    public virtual void Init(Vector2Int cell)
+    {
+        m_Cell = cell;
+    }
 
     /// <summary>
     /// Called when the player enter the cell in which that object is
     /// </summary>
-    public override void PlayerEntered()
+    public virtual void PlayerEntered()
     {
-        Destroy(gameObject);
 
-        //increase food
-        GameManager.Instance.ChangeFood(AmountGranted);
-        Debug.Log($"Food increased by {AmountGranted}");
+    }
+
+    public virtual bool PlayerWantsToEnter()
+    {
+        return true;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

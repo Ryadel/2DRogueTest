@@ -1,19 +1,23 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
+    private int m_CurrentLevel = 0;
+
     public static GameManager Instance { get; private set; }
 
     public BoardManager BoardManager;
+    public UIManager UIManager;
     public PlayerController PlayerController;
 
     public TickManager TickManager { get; private set; }
 
-    private int m_FoodAmount = 100;
+    public int FoodAmount = 100;
+    private int m_CurrentFoodAmount;
 
-    public UIDocument UIDoc;
-    private Label m_FoodLabel;
+    public bool IsGameOver { get; set; } = false;
 
     private void Awake()
     {
@@ -28,14 +32,35 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        m_FoodLabel = UIDoc.rootVisualElement.Q<Label>("FoodLabel");
-        m_FoodLabel.text = "Food : " + m_FoodAmount;
-
         TickManager = new TickManager();
         TickManager.OnTick += OnTickHappen;
 
+        StartNewGame();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
+
+    public void StartNewGame()
+    {
+        IsGameOver = false;
+        m_CurrentFoodAmount = FoodAmount;
+        PlayerController.MoveAction.Enable();
+        PlayerController.StartNewGameAction.Disable();
+        UIManager.HideGameOverPanel();
+        NewLevel();
+        UIManager.UpdateFood(FoodAmount);
+    }
+
+    public void NewLevel()
+    {
+        BoardManager.Clean();
         BoardManager.Init();
         PlayerController.Spawn(BoardManager, new Vector2Int(1, 1));
+        m_CurrentLevel++;
+        UIManager.UpdateLevel(m_CurrentLevel);
     }
 
     void OnTickHappen()
@@ -45,14 +70,20 @@ public class GameManager : MonoBehaviour
 
     public void ChangeFood(int amount)
     {
-        m_FoodAmount += amount;
-        m_FoodLabel.text = "Food : " + m_FoodAmount;
-        Debug.Log("Current amount of food : " + m_FoodAmount);
+        m_CurrentFoodAmount += amount;
+        UIManager.UpdateFood(m_CurrentFoodAmount);
+        Debug.Log("Current amount of food : " + m_CurrentFoodAmount);
+        if (m_CurrentFoodAmount <= 0)
+        {
+            GameOver();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GameOver()
     {
-        
+        IsGameOver = true;
+        PlayerController.MoveAction.Disable();
+        PlayerController.StartNewGameAction.Enable();
+        UIManager.ShowGameOverPanel(m_CurrentLevel);
     }
 }
