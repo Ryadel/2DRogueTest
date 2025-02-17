@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
-public class UIManager : MonoBehaviour
+public class UIManager
 {
     public UIDocument UIDoc;
 
@@ -28,8 +28,9 @@ public class UIManager : MonoBehaviour
     public void HideGameOverPanel() => m_GameOverPanel.style.visibility = Visibility.Hidden;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Init(UIDocument uiDoc)
     {
+        UIDoc = uiDoc;
         m_LevelLabel = UIDoc.rootVisualElement.Q<Label>("LevelLabel");
         m_FoodLabel = UIDoc.rootVisualElement.Q<Label>("FoodLabel");
         m_GameOverPanel = UIDoc.rootVisualElement.Q<VisualElement>("GameOverPanel");

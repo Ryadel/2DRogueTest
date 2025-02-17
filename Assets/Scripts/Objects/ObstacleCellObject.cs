@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class WallCellObject : CellObject
+public class ObstacleCellObject : CellObject
 {
     public Tile ObstacleTile;
     public Tile DamagedTile;

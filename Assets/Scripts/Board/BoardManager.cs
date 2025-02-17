@@ -14,14 +14,21 @@ public class BoardManager : MonoBehaviour
     public int Height;
     public Tile[] GroundTiles;
     public Tile[] WallTiles;
-    public PlayerController Player;
+    // public PlayerController PlayerController;
 
     public FoodCellObject[] FoodPrefabs;
-    public WallCellObject[] WallPrefabs;
+    public ObstacleCellObject[] ObstaclePrefabs;
+    public EnemyCellObject[] EnemyPrefabs;
     public ExitCellObject ExitCellPrefab;
 
     public int MinFoodCount = 3;
     public int MaxFoodCount = 7;
+
+    public int MinObstacleCount = 4;
+    public int MaxObstacleCount = 8;
+
+    public int MinEnemyCount = 1;
+    public int MaxEnemyCount = 2;
 
     public void Init()
     {
@@ -61,8 +68,9 @@ public class BoardManager : MonoBehaviour
         AddObject(Instantiate(ExitCellPrefab), endCoord);
         m_EmptyCellsList.Remove(endCoord);
 
-        GenerateWall();
+        GenerateObstacles();
         GenerateFood();
+        GenerateEnemies();
     }
 
     public void Clean()
@@ -101,30 +109,44 @@ public class BoardManager : MonoBehaviour
 
     void GenerateFood()
     {
-        int foodCount = Random.Range(MinFoodCount, MaxFoodCount +1);
-        for (int i = 0; i < foodCount; ++i)
+        int cnt = Random.Range(MinFoodCount, MaxFoodCount + 1);
+        for (int i = 0; i < cnt; ++i)
         {
             int randomIndex = Random.Range(0, m_EmptyCellsList.Count);
             Vector2Int coord = m_EmptyCellsList[randomIndex];
             m_EmptyCellsList.RemoveAt(randomIndex);
             CellData data = m_BoardData[coord.x, coord.y];
-            var newFood = Instantiate(FoodPrefabs[Random.Range(0, FoodPrefabs.Length)]);
-            AddObject(newFood, coord);
+            var newObj = Instantiate(FoodPrefabs[Random.Range(0, FoodPrefabs.Length)]);
+            AddObject(newObj, coord);
         }
     }
 
-    void GenerateWall()
+    void GenerateEnemies()
     {
-        int wallCount = Random.Range(6, 10);
-        for (int i = 0; i < wallCount; ++i)
+        int cnt = Random.Range(MinEnemyCount, MaxEnemyCount + 1);
+        for (int i = 0; i < cnt; ++i)
+        {
+            int randomIndex = Random.Range(0, m_EmptyCellsList.Count);
+            Vector2Int coord = m_EmptyCellsList[randomIndex];
+            m_EmptyCellsList.RemoveAt(randomIndex);
+            CellData data = m_BoardData[coord.x, coord.y];
+            var newObj = Instantiate(EnemyPrefabs[Random.Range(0, EnemyPrefabs.Length)]);
+            AddObject(newObj, coord);
+        }
+    }
+
+    void GenerateObstacles()
+    {
+        int cnt = Random.Range(MinObstacleCount, MaxObstacleCount + 1);
+        for (int i = 0; i < cnt; ++i)
         {
             int randomIndex = Random.Range(0, m_EmptyCellsList.Count);
             Vector2Int coord = m_EmptyCellsList[randomIndex];
 
             m_EmptyCellsList.RemoveAt(randomIndex);
             CellData data = m_BoardData[coord.x, coord.y];
-            WallCellObject newWall = Instantiate(WallPrefabs[Random.Range(0, WallPrefabs.Length)]);
-            AddObject(newWall, coord);
+            ObstacleCellObject newObj = Instantiate(ObstaclePrefabs[Random.Range(0, ObstaclePrefabs.Length)]);
+            AddObject(newObj, coord);
         }
     }
 

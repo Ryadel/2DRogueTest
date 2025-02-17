@@ -1,0 +1,1104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a6b9796d1c0440eba061ace5e9dff6, type: 3}
+  m_Name: I need a sprite for a 2D roguelike based upon Dante's Divine Comedy. The
+    Sprite represents the main character, which is Dante.
+  m_EditorClassIdentifier: 
+  assetsData:
+  - rid: 9046847916129911159
+  - rid: 9046847916129911167
+  - rid: 9046847916129911174
+  - rid: 9046847916129911181
+  - rid: 9046847916129911188
+  - rid: 9046847916129911195
+  - rid: 9046847916129911202
+  - rid: 9046847916129911209
+  currentMode: TextToSprite
+  m_Data:
+  - rid: 9046847916129911146
+  - rid: 9046847916129911147
+  - rid: 9046847916129911148
+  - rid: 9046847916129911149
+  - rid: 9046847916129911150
+  - rid: 9046847916129911151
+  - rid: 9046847916129911152
+  - rid: 9046847916129911160
+  preRefinedArtifact:
+    rid: -2
+  refinedArtifact:
+    rid: -2
+  selectedArtifact:
+    rid: -2
+  m_Operators:
+  - rid: 9046847916129911153
+  - rid: 9046847916129911154
+  - rid: 9046847916129911155
+  - rid: 9046847916129911156
+  - rid: 9046847916129911157
+  - rid: 9046847916129911158
+  m_PreRefineOperators: []
+  m_ExportedArtifacts: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 9046847916129911146
+      type: {class: BookmarkManager, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_BookmarkedArtifacts:
+          m_Values: []
+        m_IsFilterEnabled: 0
+    - rid: 9046847916129911147
+      type: {class: FeedbackManager, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_Liked:
+          m_Values: []
+        m_Disliked:
+          m_Values: []
+    - rid: 9046847916129911148
+      type: {class: DefaultStyleData, ns: Unity.Muse.Sprite.Data, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 9046847916129911149
+      type: {class: GenerateButtonData, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data: 
+    - rid: 9046847916129911150
+      type: {class: MainUI/UISize, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_NodeListWidth: 300
+        m_NodeListRefineWidth: 300
+        m_AssetListRefineWidth: 200
+    - rid: 9046847916129911151
+      type: {class: OperatorOverridePublishers, ns: Unity.Muse.Sprite.Data, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 9046847916129911152
+      type: {class: SessionData, ns: Unity.Muse.Sprite.Data, asm: Unity.Muse.Sprite}
+      data:
+        m_SessionId: b848fd74-8bed-48e1-a5a0-b3623b6173aa
+        sessionLoaded: 
+    - rid: 9046847916129911153
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          key: GenerateOperator
+          version: 1.0.0
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911154
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          key: PromptOperator
+          version: 0.0.2
+          settings:
+          - I need a sprite for a 2D roguelike based upon Dante's Divine Comedy.
+            The Sprite represents the main character, which is Dante. I want it with
+            a style similar to Binding of Isaac characters.
+          - 
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911155
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          key: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.50
+          - 512
+          - 512
+          - 1
+          - 1
+          - 40314
+          - 0
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 0
+          - 
+          - 
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911156
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          key: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911157
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 9046847916129911158
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          key: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - b848fd74-8bed-48e1-a5a0-b3623b6173aa
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911159
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        mode: TextToSprite
+        Guid: 48db85b5-1054-447f-ad57-8387ceb019d3
+        BatchRequestIdentifier: 
+        Seed: 21631
+        m_Operators:
+        - rid: 9046847916129911161
+        - rid: 9046847916129911162
+        - rid: 9046847916129911163
+        - rid: 9046847916129911164
+        - rid: 9046847916129911165
+        - rid: 9046847916129911166
+        history:
+        - rid: 9046847916129911159
+        children: []
+        m_UnsafeContent: 0
+    - rid: 9046847916129911160
+      type: {class: GenerateCountData, ns: Unity.Muse.Sprite.Data, asm: Unity.Muse.Sprite}
+      data:
+        m_Counter: 0
+    - rid: 9046847916129911161
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          key: GenerateOperator
+          version: 1.0.0
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911162
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          key: PromptOperator
+          version: 0.0.2
+          settings:
+          - I need a sprite for a 2D roguelike based upon Dante's Divine Comedy.
+            The Sprite represents the main character, which is Dante.
+          - 
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911163
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          key: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0,85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 21631
+          - 48db85b5-1054-447f-ad57-8387ceb019d3
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - 'Happy Harvest [Orion V4 2000]'
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911164
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          key: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911165
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 9046847916129911166
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          key: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - b848fd74-8bed-48e1-a5a0-b3623b6173aa
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911167
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        mode: TextToSprite
+        Guid: 5d9d40dc-4a87-46d6-96e7-ddc9d23e6a51
+        BatchRequestIdentifier: 
+        Seed: 13639
+        m_Operators:
+        - rid: 9046847916129911168
+        - rid: 9046847916129911169
+        - rid: 9046847916129911170
+        - rid: 9046847916129911171
+        - rid: 9046847916129911172
+        - rid: 9046847916129911173
+        history:
+        - rid: 9046847916129911167
+        children: []
+        m_UnsafeContent: 0
+    - rid: 9046847916129911168
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          key: GenerateOperator
+          version: 1.0.0
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911169
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          key: PromptOperator
+          version: 0.0.2
+          settings:
+          - I need a sprite for a 2D roguelike based upon Dante's Divine Comedy.
+            The Sprite represents the main character, which is Dante.
+          - 
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911170
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          key: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0,85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 13639
+          - 5d9d40dc-4a87-46d6-96e7-ddc9d23e6a51
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - 'Happy Harvest [Orion V4 2000]'
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911171
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          key: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911172
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 9046847916129911173
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          key: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - b848fd74-8bed-48e1-a5a0-b3623b6173aa
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911174
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        mode: TextToSprite
+        Guid: 5d756500-88be-42f8-8079-f24deed170da
+        BatchRequestIdentifier: 
+        Seed: 30082
+        m_Operators:
+        - rid: 9046847916129911175
+        - rid: 9046847916129911176
+        - rid: 9046847916129911177
+        - rid: 9046847916129911178
+        - rid: 9046847916129911179
+        - rid: 9046847916129911180
+        history:
+        - rid: 9046847916129911174
+        children: []
+        m_UnsafeContent: 0
+    - rid: 9046847916129911175
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          key: GenerateOperator
+          version: 1.0.0
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911176
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          key: PromptOperator
+          version: 0.0.2
+          settings:
+          - I need a sprite for a 2D roguelike based upon Dante's Divine Comedy.
+            The Sprite represents the main character, which is Dante.
+          - 
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911177
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          key: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0,85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 30082
+          - 5d756500-88be-42f8-8079-f24deed170da
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - 'Happy Harvest [Orion V4 2000]'
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911178
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          key: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911179
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 9046847916129911180
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          key: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - b848fd74-8bed-48e1-a5a0-b3623b6173aa
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911181
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        mode: TextToSprite
+        Guid: a9e3f689-83c3-4d94-be36-ed8823d76b05
+        BatchRequestIdentifier: 
+        Seed: 10195
+        m_Operators:
+        - rid: 9046847916129911182
+        - rid: 9046847916129911183
+        - rid: 9046847916129911184
+        - rid: 9046847916129911185
+        - rid: 9046847916129911186
+        - rid: 9046847916129911187
+        history:
+        - rid: 9046847916129911181
+        children: []
+        m_UnsafeContent: 0
+    - rid: 9046847916129911182
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          key: GenerateOperator
+          version: 1.0.0
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911183
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          key: PromptOperator
+          version: 0.0.2
+          settings:
+          - I need a sprite for a 2D roguelike based upon Dante's Divine Comedy.
+            The Sprite represents the main character, which is Dante.
+          - 
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911184
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          key: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0,85
+          - 512
+          - 512
+          - 1
+          - 1
+          - 10195
+          - a9e3f689-83c3-4d94-be36-ed8823d76b05
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - 'Happy Harvest [Orion V4 2000]'
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911185
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          key: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911186
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 9046847916129911187
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          key: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - b848fd74-8bed-48e1-a5a0-b3623b6173aa
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911188
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        mode: TextToSprite
+        Guid: f9966057-7eb7-4414-8c8f-65f9cd52aa4b
+        BatchRequestIdentifier: 
+        Seed: 64991
+        m_Operators:
+        - rid: 9046847916129911189
+        - rid: 9046847916129911190
+        - rid: 9046847916129911191
+        - rid: 9046847916129911192
+        - rid: 9046847916129911193
+        - rid: 9046847916129911194
+        history:
+        - rid: 9046847916129911188
+        children: []
+        m_UnsafeContent: 0
+    - rid: 9046847916129911189
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          key: GenerateOperator
+          version: 1.0.0
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911190
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          key: PromptOperator
+          version: 0.0.2
+          settings:
+          - I need a sprite for a 2D roguelike based upon Dante's Divine Comedy.
+            The Sprite represents the main character, which is Dante. I want it with
+            a style similar to Binding of Isaac characters.
+          - 
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911191
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          key: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.50
+          - 512
+          - 512
+          - 1
+          - 1
+          - 64991
+          - f9966057-7eb7-4414-8c8f-65f9cd52aa4b
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - 'Happy Harvest [Orion V4 2000]'
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911192
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          key: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911193
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 9046847916129911194
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          key: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - b848fd74-8bed-48e1-a5a0-b3623b6173aa
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911195
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        mode: TextToSprite
+        Guid: 741db63b-88e2-45aa-b57d-c447aeddfd13
+        BatchRequestIdentifier: 
+        Seed: 10390
+        m_Operators:
+        - rid: 9046847916129911196
+        - rid: 9046847916129911197
+        - rid: 9046847916129911198
+        - rid: 9046847916129911199
+        - rid: 9046847916129911200
+        - rid: 9046847916129911201
+        history:
+        - rid: 9046847916129911195
+        children: []
+        m_UnsafeContent: 1
+    - rid: 9046847916129911196
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          key: GenerateOperator
+          version: 1.0.0
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911197
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          key: PromptOperator
+          version: 0.0.2
+          settings:
+          - I need a sprite for a 2D roguelike based upon Dante's Divine Comedy.
+            The Sprite represents the main character, which is Dante. I want it with
+            a style similar to Binding of Isaac characters.
+          - 
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911198
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          key: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.50
+          - 512
+          - 512
+          - 1
+          - 1
+          - 10390
+          - 741db63b-88e2-45aa-b57d-c447aeddfd13
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - 'Happy Harvest [Orion V4 2000]'
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911199
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          key: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911200
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 9046847916129911201
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          key: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - b848fd74-8bed-48e1-a5a0-b3623b6173aa
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911202
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        mode: TextToSprite
+        Guid: de5edbc2-db68-4228-a9d9-e7c0ff6f3557
+        BatchRequestIdentifier: 
+        Seed: 6583
+        m_Operators:
+        - rid: 9046847916129911203
+        - rid: 9046847916129911204
+        - rid: 9046847916129911205
+        - rid: 9046847916129911206
+        - rid: 9046847916129911207
+        - rid: 9046847916129911208
+        history:
+        - rid: 9046847916129911202
+        children: []
+        m_UnsafeContent: 0
+    - rid: 9046847916129911203
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          key: GenerateOperator
+          version: 1.0.0
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911204
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          key: PromptOperator
+          version: 0.0.2
+          settings:
+          - I need a sprite for a 2D roguelike based upon Dante's Divine Comedy.
+            The Sprite represents the main character, which is Dante. I want it with
+            a style similar to Binding of Isaac characters.
+          - 
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911205
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          key: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.50
+          - 512
+          - 512
+          - 1
+          - 1
+          - 6583
+          - de5edbc2-db68-4228-a9d9-e7c0ff6f3557
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - 'Happy Harvest [Orion V4 2000]'
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911206
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          key: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911207
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 9046847916129911208
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          key: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - b848fd74-8bed-48e1-a5a0-b3623b6173aa
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911209
+      type: {class: SpriteMuseArtifact, ns: Unity.Muse.Sprite.Artifacts, asm: Unity.Muse.Sprite}
+      data:
+        mode: TextToSprite
+        Guid: 179c40c7-5422-427e-86e1-51b646952bbe
+        BatchRequestIdentifier: 
+        Seed: 59127
+        m_Operators:
+        - rid: 9046847916129911210
+        - rid: 9046847916129911211
+        - rid: 9046847916129911212
+        - rid: 9046847916129911213
+        - rid: 9046847916129911214
+        - rid: 9046847916129911215
+        history:
+        - rid: 9046847916129911209
+        children: []
+        m_UnsafeContent: 0
+    - rid: 9046847916129911210
+      type: {class: GenerateOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: GenerateOperator
+          key: GenerateOperator
+          version: 1.0.0
+          settings:
+          - TextToSprite
+          - 4
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911211
+      type: {class: PromptOperator, ns: Unity.Muse.Common, asm: Unity.Muse.Common}
+      data:
+        m_OperatorData:
+          type: PromptOperator
+          key: PromptOperator
+          version: 0.0.2
+          settings:
+          - I need a sprite for a 2D roguelike based upon Dante's Divine Comedy.
+            The Sprite represents the main character, which is Dante. I want it with
+            a style similar to Binding of Isaac characters.
+          - 
+          enabled: 1
+          assembly: 
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911212
+      type: {class: SpriteGeneratorSettingsOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          key: Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - 0.50
+          - 512
+          - 512
+          - 1
+          - 1
+          - 59127
+          - 179c40c7-5422-427e-86e1-51b646952bbe
+          - 0
+          - 5cc104e0-423a-473e-8034-b9d346cb2357
+          - 0
+          - 03fa404b-39fc-4979-9272-deb5d8c4b24c
+          - 'Happy Harvest [Orion V4 2000]'
+          - 8 Nov 2023
+          - 
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911213
+      type: {class: KeyImageOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.KeyImageOperator
+          key: Unity.Muse.Sprite.Operators.KeyImageOperator
+          version: 0.0.1
+          settings:
+          - 
+          - 
+          - True
+          - 512
+          - 512
+          - 0.5
+          enabled: 1
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0
+    - rid: 9046847916129911214
+      type: {class: SpriteRefiningMaskOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data: 
+    - rid: 9046847916129911215
+      type: {class: SessionOperator, ns: Unity.Muse.Sprite.Operators, asm: Unity.Muse.Sprite}
+      data:
+        m_OperatorData:
+          type: Unity.Muse.Sprite.Operators.SessionOperator
+          key: Unity.Muse.Sprite.Operators.SessionOperator
+          version: 0.0.1
+          settings:
+          - b848fd74-8bed-48e1-a5a0-b3623b6173aa
+          enabled: 0
+          assembly: Unity.Muse.Sprite
+          hideable: 0
+          hidden: 0
+          isRefinement: 0

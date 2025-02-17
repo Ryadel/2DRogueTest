@@ -4,24 +4,23 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private BoardManager m_Board;
-    private Vector2Int m_CellPosition;
+    public Vector2Int CellPosition { get; set; }
 
     public InputAction MoveAction;
     public InputAction StartNewGameAction;
 
-    /// <summary>
-    /// Puts the character on the board at the given position.
-    /// </summary>
-    public void Spawn(BoardManager boardManager, Vector2Int cell)
-    {
-        m_Board = boardManager;
-        MoveTo(cell);
-    }
+    public float MoveSpeed = 5.0f;
 
-    public void MoveTo(Vector2Int cell)
+    private bool m_IsMoving;
+    private Vector3 m_MoveTarget;
+
+    private Animator m_Animator;
+    private int Animator_Moving = Animator.StringToHash("Moving");
+    private int Animator_Attack = Animator.StringToHash("Attack");
+
+    void Awake()
     {
-        m_CellPosition = cell;
-        transform.position = m_Board.CellToWorld(m_CellPosition);
+        m_Animator = GetComponent<Animator>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -41,9 +40,24 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        var newCellTarget = m_CellPosition;
+        if (m_IsMoving)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, m_MoveTarget, MoveSpeed * Time.deltaTime);
+
+            if (transform.position == m_MoveTarget)
+            {
+                m_IsMoving = false;
+                m_Animator.SetBool(Animator_Moving, false);
+                var cellData = m_Board.GetCellData(CellPosition);
+                if (cellData.ContainedObject != null)
+                    cellData.ContainedObject.PlayerEntered();
+            }
+            return;
+        }
+
         if (MoveAction.triggered)
         {
+            var newCellTarget = CellPosition;
             Vector2 move = MoveAction.ReadValue<Vector2>();
             Debug.Log(move);
             //Vector2 position = (Vector2)transform.position + move * 0.1f;
@@ -60,13 +74,55 @@ public class PlayerController : MonoBehaviour
                 {
                     MoveTo(newCellTarget);
                 }
-                else if (cellData.ContainedObject.PlayerWantsToEnter())
+                else
                 {
-                    MoveTo(newCellTarget);
-                    //Call PlayerEntered AFTER moving the player! Otherwise not in cell yet
-                    cellData.ContainedObject.PlayerEntered();
+                    var canEnter = cellData.ContainedObject.PlayerWantsToEnter();
+                    if (canEnter)
+                        MoveTo(newCellTarget);
+                    else
+                        Attack();
                 }
             }
         }
+    }
+
+    public void Init()
+    {
+        m_IsMoving = false;
+    }
+
+    /// <summary>
+    /// Puts the character on the board at the given position.
+    /// </summary>
+    public void Spawn(BoardManager boardManager, Vector2Int cell)
+    {
+        m_Board = boardManager;
+        MoveTo(cell, smoothMovement: false);
+    }
+
+    public void MoveTo(Vector2Int cell, bool smoothMovement = true)
+    {
+        //technically the player is not there yet, but the movement is only cosmetic
+        //and we know nothing can stop it as we checked everything before starting it
+        //so safe to update there!
+        CellPosition = cell;
+
+        if (smoothMovement)
+        {
+            m_IsMoving = true;
+            m_MoveTarget = m_Board.CellToWorld(CellPosition);
+        }
+        else
+        {
+            m_IsMoving = false;
+            transform.position = m_Board.CellToWorld(CellPosition);
+        }
+
+        m_Animator.SetBool(Animator_Moving, m_IsMoving);
+    }
+
+    public void Attack()
+    {
+        m_Animator.SetTrigger(Animator_Attack);
     }
 }

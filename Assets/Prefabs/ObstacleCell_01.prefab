@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8166013500647090129}
   - component: {fileID: 7914605933009809266}
   m_Layer: 0
-  m_Name: WallCell_01
+  m_Name: ObstacleCell_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

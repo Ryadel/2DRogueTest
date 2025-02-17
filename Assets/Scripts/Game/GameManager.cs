@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public BoardManager BoardManager;
     public UIManager UIManager;
     public PlayerController PlayerController;
+    public UIDocument UIDoc;
+
+    public Vector2Int PlayerCellPosition => PlayerController.CellPosition;
 
     public TickManager TickManager { get; private set; }
 
@@ -18,6 +21,8 @@ public class GameManager : MonoBehaviour
     private int m_CurrentFoodAmount;
 
     public bool IsGameOver { get; set; } = false;
+
+    public CellData Cell { get; set; }
 
     private void Awake()
     {
@@ -35,6 +40,9 @@ public class GameManager : MonoBehaviour
         TickManager = new TickManager();
         TickManager.OnTick += OnTickHappen;
 
+        UIManager = new UIManager();
+        UIManager.Init(UIDoc);
+
         StartNewGame();
     }
 
@@ -46,7 +54,9 @@ public class GameManager : MonoBehaviour
     public void StartNewGame()
     {
         IsGameOver = false;
+        m_CurrentLevel = 0;
         m_CurrentFoodAmount = FoodAmount;
+        PlayerController.Init();
         PlayerController.MoveAction.Enable();
         PlayerController.StartNewGameAction.Disable();
         UIManager.HideGameOverPanel();
