@@ -1,4 +1,4 @@
-# 2DRogueTest – A Simple 2D Roguelike Prototype in Unity
+# 2DRogueTest – A Simple 2D Roguelike Prototype in Unity using Visual Studio 2022 and C#
 
 Welcome, adventurer! 🧙‍♂️
 
